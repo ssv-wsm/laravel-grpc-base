@@ -1,5 +1,5 @@
 {
-  "name": "wsm/grpc-base-laravel",
+  "name": "ssvwsm/grpc-base-laravel",
   "description": "Package help you implement grpc easier",
   "type": "php",
   "license": "MIT",
@@ -15,8 +15,8 @@
 
   "autoload": {
     "psr-4": {
-      "WSM\\GrpcLaravel\\Client\\": "src/client",
-      "WSM\\GrpcLaravel\\Server\\": "src/server"
+      "SSVWSM\\GrpcLaravel\\Client\\": "src/client",
+      "SSVWSM\\GrpcLaravel\\Server\\": "src/server"
     }
   },
 
@@ -24,7 +24,7 @@
     "laravel": {
       "dont-discover": [],
       "providers": [
-        "WSM\\GrpcLaravel\\Client\\GrpcLaravelBaseServiceProvider"
+        "SSVWSM\\GrpcLaravel\\Client\\GrpcLaravelBaseServiceProvider"
       ]
     }
   }

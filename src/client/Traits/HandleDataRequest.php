@@ -1,6 +1,6 @@
 <?php
 
-namespace WSM\GrpcLaravel\Client\Traits;
+namespace SSVWSM\GrpcLaravel\Client\Traits;
 
 use Google\Protobuf\Internal\Message;
 use Illuminate\Http\Request;

@@ -1,6 +1,6 @@
 <?php
 
-namespace WSM\GrpcLaravel\Client;
+namespace SSVWSM\GrpcLaravel\Client;
 
 class GrpcLaravelBaseServiceProvider extends \Illuminate\Support\ServiceProvider {
     /**
@@ -13,7 +13,7 @@ class GrpcLaravelBaseServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             __DIR__ . '/config/grpc.php' => config_path('grpc.php'),
             __DIR__ . '/config/octane.php' => config_path('octane.php'),
-        ], 'wsm-grpc-config');
+        ], 'ssvwsm-grpc-config');
     }
 
     /**

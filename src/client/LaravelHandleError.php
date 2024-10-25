@@ -1,8 +1,8 @@
 <?php
 
-namespace WSM\GrpcLaravel\Client;
+namespace SSVWSM\GrpcLaravel\Client;
 
-use WSM\GrpcLaravel\Client\Contracts\ErrorHandler;
+use SSVWSM\GrpcLaravel\Client\Contracts\ErrorHandler;
 use Exception;
 use Google\Rpc\Status;
 use GPBMetadata\Google\Rpc\ErrorDetails;

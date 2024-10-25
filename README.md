@@ -8,13 +8,13 @@ This package has some class and method help yan can implement Grpc to Laravel ea
 ## How to use
 
 ```shell
-composer require wsm/grpc-base-laravel
+composer require ssvwsm/grpc-base-laravel
 ```
 
 then run command to publish config.
 
 ```shell
-php artisan vendor:publish --tag=wsm-grpc-config
+php artisan vendor:publish --tag=ssvwsm-grpc-config
 ```
 
 You need know how to compile files proto with php
@@ -38,7 +38,7 @@ You need know how to compile files proto with php
 
 namespace App\Services\MicroserviceGrpc;
 
-use WSM\GrpcLaravel\Client\Contracts\BaseGrpcApi;
+use SSVWSM\GrpcLaravel\Client\Contracts\BaseGrpcApi;
 use Google\Protobuf\Internal\Message;
 use Illuminate\Http\Request;
 use Protobuf\Company\ExampleServiceClient;
@@ -72,7 +72,7 @@ $clientGrpc = (new GrpcFactory)->make(ExampleServiceClient::class);
 - Use traits;
 ```php
  ...
- use WSM\GrpcLaravel\Client\Traits\HandleDataRequest;
+ use SSVWSM\GrpcLaravel\Client\Traits\HandleDataRequest;
  ...
  class ExampleController extends Controller
  {
@@ -91,7 +91,7 @@ $clientGrpc = (new GrpcFactory)->make(ExampleServiceClient::class);
 ### Serve
 - Start serve:
 ```shell
-./vendor/wsm/grpc-base-laravel/rr-grpc serve -v -d
+./vendor/ssvwsm/grpc-base-laravel/rr-grpc serve -v -d
 ```
 
 - Example worker file:
@@ -111,16 +111,16 @@ require __DIR__.'/vendor/autoload.php';
 $app = require_once __DIR__.'/bootstrap/app.php';
 
 $app->singleton(
-    WSM\GrpcLaravel\Server\Contracts\Kernel::class,
-    WSM\GrpcLaravel\Server\Kernel::class
+    SSVWSM\GrpcLaravel\Server\Contracts\Kernel::class,
+    SSVWSM\GrpcLaravel\Server\Kernel::class
 );
 
 $app->singleton(
-    WSM\GrpcLaravel\Server\Contracts\ServiceInvoker::class,
-    WSM\GrpcLaravel\Server\LaravelServiceInvoker::class
+    SSVWSM\GrpcLaravel\Server\Contracts\ServiceInvoker::class,
+    SSVWSM\GrpcLaravel\Server\LaravelServiceInvoker::class
 );
 
-$kernel = $app->make(WSM\GrpcLaravel\Server\Kernel::class);
+$kernel = $app->make(SSVWSM\GrpcLaravel\Server\Kernel::class);
 
 $kernel->registerService(ExampleGrpcController::class);
 
