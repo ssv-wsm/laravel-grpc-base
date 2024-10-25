@@ -1,9 +1,9 @@
 <?php
 
-namespace WSM\GrpcLaravel\Server;
+namespace SSVWSM\GrpcLaravel\Server;
 
-use WSM\GrpcLaravel\Server\Contracts\Kernel as KernelContract;
-use WSM\GrpcLaravel\Server\Contracts\ServiceInvoker;
+use SSVWSM\GrpcLaravel\Server\Contracts\Kernel as KernelContract;
+use SSVWSM\GrpcLaravel\Server\Contracts\ServiceInvoker;
 use Google\Protobuf\Any;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Foundation\Bootstrap\BootProviders;

@@ -1,6 +1,6 @@
 <?php
 
-namespace WSM\GrpcLaravel\Client\Contracts;
+namespace SSVWSM\GrpcLaravel\Client\Contracts;
 
 interface ErrorHandler
 {

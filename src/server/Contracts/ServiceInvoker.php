@@ -1,6 +1,6 @@
 <?php
 
-namespace WSM\GrpcLaravel\Server\Contracts;
+namespace SSVWSM\GrpcLaravel\Server\Contracts;
 
 use Spiral\GRPC\Method;
 use Spiral\GRPC\ContextInterface;

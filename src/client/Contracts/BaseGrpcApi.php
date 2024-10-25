@@ -1,9 +1,9 @@
 <?php
 
-namespace WSM\GrpcLaravel\Client\Contracts;
+namespace SSVWSM\GrpcLaravel\Client\Contracts;
 
-use WSM\GrpcLaravel\Client\GrpcFactory;
-use WSM\GrpcLaravel\Client\LaravelHandleError;
+use SSVWSM\GrpcLaravel\Client\GrpcFactory;
+use SSVWSM\GrpcLaravel\Client\LaravelHandleError;
 use Exception;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Http\Request;

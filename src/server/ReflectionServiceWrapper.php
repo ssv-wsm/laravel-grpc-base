@@ -1,9 +1,9 @@
 <?php
 
-namespace WSM\GrpcLaravel\Server;
+namespace SSVWSM\GrpcLaravel\Server;
 
-use WSM\GrpcLaravel\Server\Contracts\ServiceInvoker;
-use WSM\GrpcLaravel\Server\Contracts\ServiceWrapper;
+use SSVWSM\GrpcLaravel\Server\Contracts\ServiceInvoker;
+use SSVWSM\GrpcLaravel\Server\Contracts\ServiceWrapper;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionMethod;
