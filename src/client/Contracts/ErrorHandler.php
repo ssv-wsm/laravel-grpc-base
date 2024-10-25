@@ -1,6 +1,6 @@
 <?php
 
-namespace binhtv\GrpcLaravel\Client\Contracts;
+namespace WSM\GrpcLaravel\Client\Contracts;
 
 interface ErrorHandler
 {

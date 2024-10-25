@@ -1,6 +1,6 @@
 <?php
 
-namespace binhtv\GrpcLaravel\Server\Contracts;
+namespace WSM\GrpcLaravel\Server\Contracts;
 
 use Spiral\RoadRunner\Worker;
 use Illuminate\Contracts\Foundation\Application;
