@@ -1,0 +1,10 @@
+version: '2.2'
+
+services:
+  grpc-php:
+    image: ssvwsm/php:8.2-dev
+    restart: always
+    mem_limit: ${MEMORY_LIMIT_PHP_FPM:-1G}
+    working_dir: /php
+    volumes:
+      - ${PATH_PHP}:/php

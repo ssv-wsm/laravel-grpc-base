@@ -1,9 +1,9 @@
 <?php
 
-namespace binhtv\GrpcLaravel\Server;
+namespace WSM\GrpcLaravel\Server;
 
 use Spiral\GRPC\StatusCode;
-use binhtv\GrpcLaravel\Server\Contracts\Validator;
+use WSM\GrpcLaravel\Server\Contracts\Validator;
 use Spiral\GRPC\Exception\ServiceException;
 use Google\Rpc\BadRequest\FieldViolation;
 use Illuminate\Contracts\Validation\Factory;

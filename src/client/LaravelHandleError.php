@@ -1,8 +1,8 @@
 <?php
 
-namespace binhtv\GrpcLaravel\Client;
+namespace WSM\GrpcLaravel\Client;
 
-use binhtv\GrpcLaravel\Client\Contracts\ErrorHandler;
+use WSM\GrpcLaravel\Client\Contracts\ErrorHandler;
 use Exception;
 use Google\Rpc\Status;
 use GPBMetadata\Google\Rpc\ErrorDetails;

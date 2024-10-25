@@ -1,28 +1,22 @@
 {
-  "name": "binhtv/grpc-base-laravel",
+  "name": "wsm/grpc-base-laravel",
   "description": "Package help you implement grpc easier",
   "type": "php",
   "license": "MIT",
-  "authors": [
-    {
-      "name": "Binh",
-      "email": "tranbinh16101998@gmail.com"
-    }
-  ],
   "minimum-stability": "dev",
   "require": {
-    "php": "^7.4",
-    "google/common-protos":"^2.0.0",
-    "google/protobuf": "^3.19",
-    "grpc/grpc": "^1.42",
-    "spiral/php-grpc": "^1.6",
-    "spiral/roadrunner-laravel": "^3.7"
+    "php": "^8.2",
+    "google/common-protos": "dev-main",
+    "google/protobuf": "^4.29@RC",
+    "grpc/grpc": "dev-master",
+    "spiral/roadrunner": "dev-master",
+    "laravel/octane": "2.x-dev"
   },
 
   "autoload": {
     "psr-4": {
-      "binhtv\\GrpcLaravel\\Client\\": "src/client",
-      "binhtv\\GrpcLaravel\\Server\\": "src/server"
+      "WSM\\GrpcLaravel\\Client\\": "src/client",
+      "WSM\\GrpcLaravel\\Server\\": "src/server"
     }
   },
 
@@ -30,7 +24,7 @@
     "laravel": {
       "dont-discover": [],
       "providers": [
-        "binhtv\\GrpcLaravel\\Client\\GrpcLaravelBaseServiceProvider"
+        "WSM\\GrpcLaravel\\Client\\GrpcLaravelBaseServiceProvider"
       ]
     }
   }

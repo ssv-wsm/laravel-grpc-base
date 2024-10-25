@@ -1,6 +1,6 @@
 <?php
 
-namespace binhtv\GrpcLaravel\Client;
+namespace WSM\GrpcLaravel\Client;
 
 use Illuminate\Contracts\Config\Repository as Config;
 

@@ -8,12 +8,13 @@ This package has some class and method help yan can implement Grpc to Laravel ea
 ## How to use
 
 ```shell
-composer require binhtv/grpc-base-laravel
+composer require wsm/grpc-base-laravel
 ```
+
 then run command to publish config.
 
 ```shell
-php artisan vendor:publish --tag=binhtv-grpc-config
+php artisan vendor:publish --tag=wsm-grpc-config
 ```
 
 You need know how to compile files proto with php
@@ -37,7 +38,7 @@ You need know how to compile files proto with php
 
 namespace App\Services\MicroserviceGrpc;
 
-use binhtv\GrpcLaravel\Client\Contracts\BaseGrpcApi;
+use WSM\GrpcLaravel\Client\Contracts\BaseGrpcApi;
 use Google\Protobuf\Internal\Message;
 use Illuminate\Http\Request;
 use Protobuf\Company\ExampleServiceClient;
@@ -71,7 +72,7 @@ $clientGrpc = (new GrpcFactory)->make(ExampleServiceClient::class);
 - Use traits;
 ```php
  ...
- use binhtv\GrpcLaravel\Client\Traits\HandleDataRequest;
+ use WSM\GrpcLaravel\Client\Traits\HandleDataRequest;
  ...
  class ExampleController extends Controller
  {
@@ -80,7 +81,7 @@ $clientGrpc = (new GrpcFactory)->make(ExampleServiceClient::class);
 ```
 
 - methods:
-   
+
 | Name | Params | Return | Description
 | --- | --- | --- | --- |
 | `mergeRequestToGrpcRequest` | - An object instance of Illuminate\Http\Request; <br/> - Path of GRPC request class| object: grpc request | Convert laravel request to grpc request
@@ -90,7 +91,7 @@ $clientGrpc = (new GrpcFactory)->make(ExampleServiceClient::class);
 ### Serve
 - Start serve:
 ```shell
-./vendor/binhtv/grpc-base-laravel/rr-grpc serve -v -d
+./vendor/wsm/grpc-base-laravel/rr-grpc serve -v -d
 ```
 
 - Example worker file:
@@ -110,16 +111,16 @@ require __DIR__.'/vendor/autoload.php';
 $app = require_once __DIR__.'/bootstrap/app.php';
 
 $app->singleton(
-    binhtv\GrpcLaravel\Server\Contracts\Kernel::class,
-    binhtv\GrpcLaravel\Server\Kernel::class
+    WSM\GrpcLaravel\Server\Contracts\Kernel::class,
+    WSM\GrpcLaravel\Server\Kernel::class
 );
 
 $app->singleton(
-    binhtv\GrpcLaravel\Server\Contracts\ServiceInvoker::class,
-    binhtv\GrpcLaravel\Server\LaravelServiceInvoker::class
+    WSM\GrpcLaravel\Server\Contracts\ServiceInvoker::class,
+    WSM\GrpcLaravel\Server\LaravelServiceInvoker::class
 );
 
-$kernel = $app->make(binhtv\GrpcLaravel\Server\Kernel::class);
+$kernel = $app->make(WSM\GrpcLaravel\Server\Kernel::class);
 
 $kernel->registerService(ExampleGrpcController::class);
 

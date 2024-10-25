@@ -1,8 +1,8 @@
 <?php
 
-namespace binhtv\GrpcLaravel\Server;
+namespace WSM\GrpcLaravel\Server;
 
-use binhtv\GrpcLaravel\Server\Contracts\ServiceInvoker;
+use WSM\GrpcLaravel\Server\Contracts\ServiceInvoker;
 use Google\Protobuf\Internal\Message;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Foundation\Application;
